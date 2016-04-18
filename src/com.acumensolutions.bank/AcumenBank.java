@@ -43,7 +43,7 @@ public class AcumenBank {
 		SavingsAccount garysSavingsAccount = new SavingsAccount("Gary", 10000, .0056, 4);
 		System.out.println();
 		printAccountDetails(acesSavingsAccount);
-		System.out.println()
+		System.out.println();
 		printAccountDetails(garysSavingsAccount);
 		System.out.println();
 		
