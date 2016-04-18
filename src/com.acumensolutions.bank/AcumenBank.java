@@ -33,18 +33,16 @@ public class AcumenBank {
 		System.out.println();
 		printAccountDetails(gobsAccount);
 
-		// sample code for savings account implementation
-		/*
+
 		// Initialize new savings account with initial balance of $30,000 and 0.89% interest
-		SavingsAccount acesSavingsAccount = new SavingsAccount("Ace", 30000, .0089);
+		SavingsAccount acesSavingsAccount = new SavingsAccount("Ace", 30000, .0089, 4);
 		
-		SavingsAccount garysSavingsAccount = new SavingsAccount("Gary", 10000, .0056);
+		SavingsAccount garysSavingsAccount = new SavingsAccount("Gary", 10000, .0056, 4);
 		
 		acesSavingsAccount.transfer(garysSavingsAccount, 5000);
 		// apply 2 years of interest to the savings accounts
 		acesSavingsAccount.applyInterest(2);
 		garysSavingsAccount.applyInterest(2);
-		*/
 	}
 
 	private static void printAccountDetails(CheckingAccount account) {
