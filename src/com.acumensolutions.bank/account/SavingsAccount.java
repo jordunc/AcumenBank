@@ -3,14 +3,20 @@ package account;
 public class SavingsAccount {
 	private String ownerName;
 	private double balance;
+	private double interestRate;
+	private int perYear;
 	
-	public CheckingAccount(String ownerName, double balance) {
+	public CheckingAccount(String ownerName, double balance, double interestRate, int perYear) {
 		this.ownerName = ownerName;
 		this.balance = balance;
+		this.interestRate = interestRate;
+		this.perYear = perYear;
 	}
 	
-	public double compileInterest(int time, double rate, int timesPerYear) {
-		return (this.balance * math.pow(1 + (rate/((double)*timesPerYear)), (rate * (double)time)));
+	public double applyInterest(int time) {
+		double amount = math.pow(1 + (this.interestRate/((double)*this.perYear)), (this.interestRate * (double)time));
+		amount = this.balance * amount;
+		return amount;
 	}
 	
 	public void transfer(CheckingAccount destinationAccount, double amount) {
