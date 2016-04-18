@@ -24,6 +24,11 @@ public class SavingsAccount {
 		this.withdraw(amount);
 	}
 	
+	public void transfer(SavingsAccount destinationAccount, double amount) {
+		destinationAccount.deposit(amount);
+		this.withdraw(amount);
+	}
+	
 	public void deposit(double amount) {
 		if (amount < 0) {
 			throw new IllegalArgumentException("Cannot deposit a negative amount");

@@ -13,6 +13,10 @@ public class CheckingAccount {
 		destinationAccount.deposit(amount);
 		this.withdraw(amount);
 	}
+	
+	public void transfer(SavingsAccount destinationAccount, double amount) {
+		destinationAccount.deposit(amount);
+		this.withdraw(amount);
 
 	public void deposit(double amount) {
 		if (amount < 0) {
