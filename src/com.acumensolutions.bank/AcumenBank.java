@@ -59,7 +59,7 @@ public class AcumenBank {
 		
 		System.out.println("Updated Account Details:");
 		System.out.println();
-		printAccountDetails(acesSavingssAccount);
+		printAccountDetails(acesSavingsAccount);
 		System.out.println();
 		printAccountDetails(garysSavingsAccount);
 		System.out.println();
@@ -74,7 +74,7 @@ public class AcumenBank {
 		
 		System.out.println("Updated Account Details:");
 		System.out.println();
-		printAccountDetails(acesSavingssAccount);
+		printAccountDetails(acesSavingsAccount);
 		System.out.println();
 		printAccountDetails(garysSavingsAccount);
 		System.out.println();
