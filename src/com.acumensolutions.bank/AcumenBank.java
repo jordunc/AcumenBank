@@ -17,6 +17,8 @@ public class AcumenBank {
 		printAccountDetails(michaelsAccount);
 		System.out.println();
 		printAccountDetails(gobsAccount);
+		System.out.println();
+		
 
 		System.out.println();
 		System.out.println("Making transfer of $1000...");
@@ -33,17 +35,49 @@ public class AcumenBank {
 		printAccountDetails(michaelsAccount);
 		System.out.println();
 		printAccountDetails(gobsAccount);
-
+		System.out.println();
 
 		// Initialize new savings account with initial balance of $30,000 and 0.89% interest
 		SavingsAccount acesSavingsAccount = new SavingsAccount("Ace", 30000, .0089, 4);
 		
 		SavingsAccount garysSavingsAccount = new SavingsAccount("Gary", 10000, .0056, 4);
+		System.out.println();
+		printAccountDetails(acesSavingsAccount);
+		System.out.println()
+		printAccountDetails(garysSavingsAccount);
+		System.out.println();
+		
+		System.out.println();
+		System.out.println("Making transfer of $5000...");
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			return;
+		}
 		
 		acesSavingsAccount.transfer(garysSavingsAccount, 5000);
+		
+		System.out.println("Updated Account Details:");
+		System.out.println();
+		printAccountDetails(acesSavingssAccount);
+		System.out.println();
+		printAccountDetails(garysSavingsAccount);
+		System.out.println();
+		
+		
 		// apply 2 years of interest to the savings accounts
+		
+		System.out.println();
+		System.out.println("Applying Interest")
 		acesSavingsAccount.applyInterest(2);
 		garysSavingsAccount.applyInterest(2);
+		
+		System.out.println("Updated Account Details:");
+		System.out.println();
+		printAccountDetails(acesSavingssAccount);
+		System.out.println();
+		printAccountDetails(garysSavingsAccount);
+		System.out.println();
 	}
 
 	private static void printAccountDetails(CheckingAccount account) {
