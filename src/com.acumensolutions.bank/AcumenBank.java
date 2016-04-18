@@ -84,4 +84,9 @@ public class AcumenBank {
 		System.out.format("Account for %s:\r\n", account.getOwnerName());
 		System.out.format("Balance: $%.2f\r\n", account.getBalance());
 	}
+	
+	private static void printAccountDetails(SavingsAccount account) {
+		System.out.format("Account for %s:\r\n", account.getOwnerName());
+		System.out.format("Balance: $%.2f\r\n", account.getBalance());
+	}
 }
