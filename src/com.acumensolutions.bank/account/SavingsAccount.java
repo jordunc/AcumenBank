@@ -6,7 +6,7 @@ public class SavingsAccount {
 	private double interestRate;
 	private int perYear;
 	
-	public CheckingAccount(String ownerName, double balance, double interestRate, int perYear) {
+	public SavingsAccount(String ownerName, double balance, double interestRate, int perYear) {
 		this.ownerName = ownerName;
 		this.balance = balance;
 		this.interestRate = interestRate;
