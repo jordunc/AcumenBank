@@ -1,0 +1,54 @@
+package com.acumensolutions.bank;
+
+import account.CheckingAccount;
+
+public class AcumenBank {
+
+	public static void main(String[] args) {
+		System.out.println("Welcome to Acumen Bank!");
+		System.out.println();
+
+		CheckingAccount michaelsAccount = new CheckingAccount("Michael", 5000);
+		CheckingAccount gobsAccount = new CheckingAccount("Gob", 2000);
+
+		System.out.println("Open Accounts:");
+		System.out.println();
+		printAccountDetails(michaelsAccount);
+		System.out.println();
+		printAccountDetails(gobsAccount);
+
+		System.out.println();
+		System.out.println("Making transfer of $1000...");
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			return;
+		}
+
+		michaelsAccount.transfer(gobsAccount, 1000);
+
+		System.out.println("Updated Account Details:");
+		System.out.println();
+		printAccountDetails(michaelsAccount);
+		System.out.println();
+		printAccountDetails(gobsAccount);
+
+		// sample code for savings account implementation
+		/*
+		// Initialize new savings account with initial balance of $30,000 and 0.89% interest
+		SavingsAccount acesSavingsAccount = new SavingsAccount("Ace", 30000, .0089);
+		
+		SavingsAccount garysSavingsAccount = new SavingsAccount("Gary", 10000, .0056);
+		
+		acesSavingsAccount.transfer(garysSavingsAccount, 5000);
+		// apply 2 years of interest to the savings accounts
+		acesSavingsAccount.applyInterest(2);
+		garysSavingsAccount.applyInterest(2);
+		*/
+	}
+
+	private static void printAccountDetails(CheckingAccount account) {
+		System.out.format("Account for %s:\r\n", account.getOwnerName());
+		System.out.format("Balance: $%.2f\r\n", account.getBalance());
+	}
+}
