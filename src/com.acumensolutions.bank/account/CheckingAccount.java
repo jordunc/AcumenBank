@@ -11,6 +11,7 @@ public class CheckingAccount {
 
 	public void transfer(CheckingAccount destinationAccount, double amount) {
 		destinationAccount.deposit(amount);
+		this.withdraw(amount);
 	}
 
 	public void deposit(double amount) {
