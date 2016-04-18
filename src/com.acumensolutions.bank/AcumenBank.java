@@ -68,7 +68,7 @@ public class AcumenBank {
 		// apply 2 years of interest to the savings accounts
 		
 		System.out.println();
-		System.out.println("Applying Interest")
+		System.out.println("Applying Interest");
 		acesSavingsAccount.applyInterest(2);
 		garysSavingsAccount.applyInterest(2);
 		
