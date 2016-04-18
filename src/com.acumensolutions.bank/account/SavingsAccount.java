@@ -14,7 +14,7 @@ public class SavingsAccount {
 	}
 	
 	public double applyInterest(int time) {
-		double amount = Math.pow(1 + (this.interestRate/((double)*this.perYear)), (this.interestRate * (double)time));
+		double amount = (double) Math.pow(1.0 + (this.interestRate/((double)*this.perYear)), (this.interestRate * (double)time))
 		amount = this.balance * amount;
 		return amount;
 	}
