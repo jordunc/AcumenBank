@@ -13,10 +13,10 @@ public class SavingsAccount {
 		this.perYear = perYear;
 	}
 	
-	public double applyInterest(int time) {
+	public void applyInterest(int time) {
 		double amount = Math.pow(1.0 + (this.interestRate/((double)this.perYear)), (this.perYear * (double)time));
 		amount = this.balance * amount;
-		return amount;
+		this.balance = amount;
 	}
 	
 	public void transfer(CheckingAccount destinationAccount, double amount) {
